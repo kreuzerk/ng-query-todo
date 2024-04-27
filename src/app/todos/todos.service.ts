@@ -1,7 +1,7 @@
 import {inject, Injectable, signal} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Todo} from "./todo.model";
-import {Observable, lastValueFrom} from "rxjs";
+import {lastValueFrom} from "rxjs";
 
 const BE_URL = 'http://localhost:3000';
 
