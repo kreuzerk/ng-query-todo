@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal} from "@angular/core";
+import {ChangeDetectionStrategy, Component, inject, signal} from "@angular/core";
 import {injectMutation, injectQuery, injectQueryClient} from "@tanstack/angular-query-experimental";
 import {FormsModule} from "@angular/forms";
 
@@ -33,7 +33,6 @@ import {TODOS_QUERY_KEY} from "./todos.query-keys";
 })
 export default class TodoEditorComponent {
   #todosService = inject(TodosService);
-  #destroyRef = inject(DestroyRef);
   #client = injectQueryClient();
 
   inputValue = signal('');
